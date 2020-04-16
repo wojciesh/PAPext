@@ -1,0 +1,28 @@
+{
+   "manifest_version": 2,
+   "name": "PAP ext",
+   "version": "1.0",
+   "offline_enabled": false,
+   "content_scripts": [
+      {
+         "all_frames": true,
+         "js": [
+            "cs.js"
+         ],
+         "matches": [
+            "*://*.pap.pl/node/*",
+            "*://pap.pl/node/*"
+         ]
+      }
+   ],
+   "description": "Rozszerzenie automatycznie przekierowuje na docelowy artykuł ze stron PAP posiadających jedynie link do artykułu (którego nie można normalnie kliknąć!). Takie strony zdarzają się czasem na PAP RSS. Zamienia też połączenie na bezpieczne (HTTPS).",
+   "icons": {
+		"128": "icons/icon128.png",
+		"48": "icons/icon48.png",
+		"32": "icons/icon32.png",
+		"24": "icons/icon24.png"
+   },
+   "web_accessible_resources": [
+      "f.js"
+   ]
+}
